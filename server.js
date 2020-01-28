@@ -4,4 +4,6 @@ const PORT = 4000;
 
 const app = express();
 
+const DB = require("./models");
+
 app.listen(PORT, () => console.log(`Server listening at ${PORT}...`));
