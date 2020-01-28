@@ -13,5 +13,5 @@ mongoose
   .catch(err => console.log(err));
 
 module.exports = {
-  User: require("./User")
+  Subscriber: require("./Subscriber")
 };

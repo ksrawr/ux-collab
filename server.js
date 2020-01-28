@@ -11,8 +11,8 @@ const DB = require("./models");
 app.use(bodyParser.json());
 
 /* API Routes */
-app.get("/api/v1/Users", (request, response) => {
-  DB.User.find({}, (err, foundUsers) => {
+app.get("/api/v1/Subscribers", (request, response) => {
+  DB.Subscriber.find({}, (err, foundUsers) => {
     if (err) {
       return response
         .status(400)
@@ -22,8 +22,8 @@ app.get("/api/v1/Users", (request, response) => {
   });
 });
 
-app.post("/api/v1/Users", (request, response) => {
-  DB.User.create(request.body, (err, createdUser) => {
+app.post("/api/v1/Subscribers", (request, response) => {
+  DB.Subscriber.create(request.body, (err, createdUser) => {
     if (err) {
       return response
         .status(500)

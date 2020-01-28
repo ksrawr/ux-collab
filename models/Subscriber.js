@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
+const subscriberSchema = new mongoose.Schema({
   firstName: {
     required: true,
     type: String,
@@ -23,6 +23,6 @@ const userSchema = new mongoose.Schema({
   frequency: String
 });
 
-const User = mongoose.model("User", userSchema);
+const Subscriber = mongoose.model("Subscriber", subscriberSchema);
 
-module.exports = User;
+module.exports = Subscriber;
