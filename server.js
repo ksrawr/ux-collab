@@ -4,11 +4,13 @@ const bodyParser = require("body-parser");
 const PORT = 4000;
 
 const app = express();
+const path = require("path");
 
 const DB = require("./models");
 
 /* Middleware */
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname + "/public")));
 
 /* API Routes */
 app.get("/api/v1/Subscribers", (request, response) => {
@@ -38,4 +40,15 @@ app.post("/api/v1/Subscribers", (request, response) => {
   });
 });
 
+/* HTML Routes */
+app.get("/", (request, response) => {
+  response.sendFile(__dirname + "/views/index.html");
+});
+
+/* HTML Routes */
+app.get("/admin", (request, response) => {
+  response.sendFile(__dirname + "/views/admin.html");
+});
+
+/* Start Server */
 app.listen(PORT, () => console.log(`Server listening at ${PORT}...`));
