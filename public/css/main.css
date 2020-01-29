@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 :root {
   /* Colors */
-  --textcolor: #000b0d;
+  --body-text: #000b0d;
   --cta: #3d6662;
   --background: #f8cdad;
   --whitespace: #f8f8f8;
   /* Fonts */
-  --primaryfont: "Roboto", sans-serif;
+  --primary-font: "Roboto", sans-serif;
   --regular: 400;
   --bold: 800;
+  /* Shadows */
+  --header-shadow: 2px 2px 10px black;
+  --element-shadow: 2px 2px 5px black;
 }
 * {
   padding: 0;
@@ -17,14 +20,17 @@
 }
 body {
   background-color: var(--cta);
-  font-family: var(--primaryfont);
+  font-family: var(--primary-font);
   font-size: 18px;
 }
 
 h1 {
+  margin-top: 19px;
   font-weight: var(--bold);
-  font-size: 32px;
+  text-align: center;
+  font-size: 40px;
   color: var(--whitespace);
+  text-shadow: var(--header-shadow);
 }
 h2 {
   font-weight: var(--bold);
@@ -34,13 +40,17 @@ h4 {
   color: var(--whitespace);
 }
 .splash {
-  width: 100%;
+  /* width: 100%; */
+  width: 1244px;
+  height: 790px;
+  box-shadow: var(--element-shadow);
 }
 .hero {
   background-color: salmon;
   background-image: url("/images/temp_yoda.png");
-  background-position: center;
-  height: 600px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -48,6 +58,7 @@ h4 {
 }
 .forms {
   background-color: var(--whitespace);
+  height: 790px;
   padding: 15px 30px;
 }
 .divider {
@@ -72,8 +83,17 @@ h4 {
   border-radius: 20px;
 }
 @media (max-width: 600px) {
+  h1 {
+    font-size: 25px;
+  }
   .stack {
     display: flex;
     flex-direction: column;
+  }
+  .splash {
+    width: 100%;
+  }
+  .hero {
+    height: 100vw;
   }
 }
