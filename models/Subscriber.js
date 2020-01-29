@@ -19,7 +19,8 @@ const subscriberSchema = new mongoose.Schema({
     required: true,
     type: String,
     minlength: [2, "Your last name must be at least 2 characters."],
-    trim: true
+    trim: true,
+    match: [/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, 'Invalid email address'],
   },
   preferences: [String],
   frequency: String
