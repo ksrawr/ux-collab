@@ -71,3 +71,9 @@ h4 {
 .btn-sm {
   border-radius: 20px;
 }
+@media (max-width: 600px) {
+  .stack {
+    display: flex;
+    flex-direction: column;
+  }
+}
