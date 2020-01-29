@@ -42,13 +42,17 @@
         <div class="col-md-5 hero">
           <h1>Alien Chronicles: as told by Baby Yoda</h1>
 
-          <h4>Dive deep into the bizarre, mysterious and spooky unknown.</h4>
+          <h4 class="slogan">
+            Dive deep into the bizarre, mysterious and spooky unknown.
+          </h4>
         </div>
         <div class="col-md-7 forms">
           <h2>Sign up for our Newsletter!</h2>
           <p>"Do or do not. There is no try."</p>
 
-          <div class="row">*Google Link Placeholder*</div>
+          <div class="google-button">
+            <img src="/images/googleButton.png" />
+          </div>
           <div class="row divider">
             <div class="spacer"></div>
             <p id="or">Or</p>
@@ -57,7 +61,7 @@
           <form class="needs-validation" id="subscriberForm">
             <div class="row">
               <div class="col-md-6 mb-3">
-                <label for="firstName">First name</label>
+                <label for="firstName">First</label>
                 <input
                   type="text"
                   class="form-control"
@@ -72,7 +76,7 @@
                 </div>
               </div>
               <div class="col-md-6 mb-3">
-                <label for="lastName">Last name</label>
+                <label for="lastName">Last</label>
                 <input
                   type="text"
                   class="form-control"
@@ -98,8 +102,8 @@
                 Please enter a valid email address.
               </div>
             </div>
-            <div class="row selector">
-              <p>
+            <div class="row freq-selector">
+              <p class="mb-0">
                 How often?
               </p>
               <select id="frequency">
@@ -108,9 +112,11 @@
                 <option value="monthly">monthly</option>
               </select>
             </div>
-            <div class="row checkboxes">
-              <p>Select topics you'd like to know more about:</p>
-              <div class="col-md-6">
+            <p class="topics mb-0">
+              Select topics you'd like to know more about:
+            </p>
+            <div class="row mb-0 checkboxes">
+              <div class="">
                 <div class="checkbox-body custom-control custom-checkbox">
                   <input
                     type="checkbox"
@@ -121,7 +127,7 @@
                   <label
                     class="checkbox-body custom-control-label"
                     for="abductions"
-                    ><img src="/images/ufo.svg" />Abductions</label
+                    ><img class="icon" src="/images/ufo.svg" />Abductions</label
                   >
                 </div>
                 <div class="checkbox-body custom-control custom-checkbox">
@@ -132,11 +138,12 @@
                     value="alienNews"
                   />
                   <label class="custom-control-label" for="alienNews"
-                    ><img src="/images/spaceship.svg" />Alien News</label
+                    ><img class="icon" src="/images/spaceship.svg" />Alien
+                    News</label
                   >
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="">
                 <div class="checkbox-body custom-control custom-checkbox">
                   <input
                     type="checkbox"
@@ -145,7 +152,8 @@
                     value="popCulture"
                   />
                   <label class="custom-control-label" for="popCulture"
-                    ><img src="/images/alien2.svg" />Pop Culture</label
+                    ><img class="icon" src="/images/alien2.svg" />Pop
+                    Culture</label
                   >
                 </div>
                 <div class="checkbox-body custom-control custom-checkbox">
@@ -156,7 +164,7 @@
                     value="areaFiftyOne"
                   />
                   <label class="custom-control-label" for="areaFiftyOne"
-                    ><img src="/images/alien1.svg" />Area 51</label
+                    ><img class="icon" src="/images/alien1.svg" />Area 51</label
                   >
                 </div>
               </div>
@@ -168,12 +176,14 @@
                 id="consent"
                 value="consent"
               />
-              <label class="custom-control-label" for="consent"
-                >I agree to the terms and conditions and privacy policy
-              </label>
-              <button class="btn btn-secondary btn-sm" type="submit">
-                Sign Up
-              </button>
+              <div class="mb-0 signup">
+                <label class="custom-control-label" for="consent"
+                  >I agree to the terms and conditions and privacy policy
+                </label>
+                <button class="btn btn-secondary btn-sm" type="submit">
+                  Sign Up
+                </button>
+              </div>
             </div>
           </form>
           <footer>
