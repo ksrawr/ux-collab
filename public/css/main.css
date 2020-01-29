@@ -6,7 +6,7 @@
   --background: #f8cdad;
   --whitespace: #f8f8f8;
   /* Fonts */
-  --header: "Roboto", sans-serif;
+  --primaryfont: "Roboto", sans-serif;
   --regular: 400;
   --bold: 800;
 }
@@ -16,13 +16,47 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--background);
+  background-color: var(--cta);
+  font-family: var(--primaryfont);
 }
-h1,
-h2,
-h3 {
-  font-family: var(--header);
-}
+
 h1 {
   font-weight: var(--bold);
+  color: var(--whitespace);
+}
+h2 {
+  font-weight: var(--bold);
+  font-size: 25;
+}
+h4 {
+  color: var(--whitespace);
+}
+.splash {
+  width: 100%;
+}
+.hero {
+  background-color: salmon;
+  background-image: url("/images/temp_yoda.png");
+  background-position: center;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.forms {
+  background-color: var(--whitespace);
+  padding: 15px 30px;
+}
+.divider {
+  display: flex;
+  justify-content: center;
+  line-height: 40px;
+}
+.selector {
+  padding-top: 10px;
+}
+.checkboxes {
+  display: flex;
+  justify-content: space-evenly;
 }

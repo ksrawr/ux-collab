@@ -4,25 +4,155 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="/js/app.js"></script>
+    <!-- Bootstrap Dependency Scripts -->
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom Scripts -->
+    <script defer src="/js/app.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css" />
-    <title>Document</title>
+    <title>Alien Chronicles</title>
   </head>
   <body>
-    <main>
-      <sectiction class="signup">
-        <section id="hero">
+    <div class="container splash">
+      <div class="row justify-content-center">
+        <div class="col-4 hero">
           <h1>Alien Chronicles: as told by Baby Yoda</h1>
-          <h3>Dive deep into the bizarre, mysterious and spooky unknown.</h3>
-        </section>
-        <section id="forms">
-          <h2>Sign up for our Newsletter!</h2>
-          <img src="/images/#" alt="placeholder:log in with google" />
-          <div class="divider">
-            ————————————————————— Or —————————————————————
+          <h4>Dive deep into the bizarre, mysterious and spooky unknown.</h4>
+        </div>
+        <div class="col-6 forms">
+          <div class="row"><h2>Sign up for our Newsletter!</h2></div>
+          <div class="row">*Google Link Placeholder*</div>
+          <div class="row divider">
+            <p>———————————— Or ————————————</p>
           </div>
-        </section>
-      </sectiction>
-    </main>
+          <form class="needs-validation">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">First name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="First Name"
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Last name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Last Name"
+                  value=""
+                  required
+                />
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email">Email </label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="you@example.com"
+              />
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+            <div class="row selector">
+              <p>
+                Signing up gets you
+                <select id="frequency">
+                  <option value="daily">daily</option>
+                  <option value="weekly">weekly</option>
+                  <option value="monthly">monthly</option>
+                </select>
+                extra-terrestrial news and content beamed straight to your
+                inbox!
+              </p>
+            </div>
+            <div class="row checkboxes">
+              <div class="col-md-6">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="abductions"
+                  />
+                  <label class="custom-control-label" for="abductions"
+                    >Abductions</label
+                  >
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="alienNews"
+                  />
+                  <label class="custom-control-label" for="alienNews"
+                    >Alien News</label
+                  >
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="popCulture"
+                  />
+                  <label class="custom-control-label" for="popCulture"
+                    >Pop Culture</label
+                  >
+                </div>
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="areaFiftyOne"
+                  />
+                  <label class="custom-control-label" for="areaFiftyOne"
+                    >Area 51</label
+                  >
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
