@@ -1,3 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+:root {
+  /* Colors */
+  --textcolor: #000b0d;
+  --cta: #3d6662;
+  --background: #f8cdad;
+  --whitespace: #f8f8f8;
+  /* Fonts */
+  --header: "Roboto", sans-serif;
+  --regular: 400;
+  --bold: 800;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-  background-color: teal;
+  background-color: var(--background);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--header);
+}
+h1 {
+  font-weight: var(--bold);
 }

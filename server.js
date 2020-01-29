@@ -1,4 +1,4 @@
-/* Server Config */
+/*——————————————————————————— Server Config ———————————————————————————*/
 const express = require("express");
 const bodyParser = require("body-parser");
 const PORT = 4000;
@@ -8,11 +8,11 @@ const path = require("path");
 
 const DB = require("./models");
 
-/* Middleware */
+/*————————————————————————————— Middleware ————————————————————————————*/
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname + "/public")));
 
-/* API Routes */
+/*————————————————————————————— API Routes ————————————————————————————*/
 app.get("/api/v1/Subscribers", (request, response) => {
   DB.Subscriber.find({}, (err, foundUsers) => {
     if (err) {
@@ -40,15 +40,14 @@ app.post("/api/v1/Subscribers", (request, response) => {
   });
 });
 
-/* HTML Routes */
+/*———————————————————————————— HTML Routes ————————————————————————————*/
 app.get("/", (request, response) => {
   response.sendFile(__dirname + "/views/index.html");
 });
 
-/* HTML Routes */
 app.get("/admin", (request, response) => {
   response.sendFile(__dirname + "/views/admin.html");
 });
 
-/* Start Server */
+/*———————————————————————————— Start Server ———————————————————————————*/
 app.listen(PORT, () => console.log(`Server listening at ${PORT}...`));
