@@ -39,17 +39,20 @@
   <body>
     <div class="container splash">
       <div class="row justify-content-center stack">
-        <div class="col-md-4 hero">
+        <div class="col-md-5 hero">
           <h1>Alien Chronicles: as told by Baby Yoda</h1>
+
           <h4>Dive deep into the bizarre, mysterious and spooky unknown.</h4>
         </div>
-        <div class="col-md-6 forms">
-          <div class="row"><h2>Sign up for our Newsletter!</h2></div>
+        <div class="col-md-7 forms">
+          <h2>Sign up for our Newsletter!</h2>
+          <p>"Do or do not. There is no try."</p>
+
           <div class="row">*Google Link Placeholder*</div>
           <div class="row divider">
             <p>———————————— Or ————————————</p>
           </div>
-          <form class="needs-validation">
+          <form class="needs-validation" id="subscriberForm">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="firstName">First name</label>
@@ -62,7 +65,8 @@
                   required
                 />
                 <div class="invalid-feedback">
-                  Valid first name is required.
+                  First name must be at least two characters long and contain no
+                  special characters.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
@@ -94,17 +98,14 @@
             </div>
             <div class="row selector">
               <p>
-                Signing up gets you
-                <select id="frequency">
-                  <option value="daily">daily</option>
-                  <option value="weekly">weekly</option>
-                  <option value="monthly">monthly</option>
-                </select>
-                extra-terrestrial news and content beamed straight to your
-                inbox!
+                How often?
               </p>
+              <select id="frequency">
+                <option value="daily">daily</option>
+                <option value="weekly">weekly</option>
+                <option value="monthly">monthly</option>
+              </select>
             </div>
-
             <div class="row checkboxes">
               <p>Select topics you'd like to know more about:</p>
               <div class="col-md-6">
