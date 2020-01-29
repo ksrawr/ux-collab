@@ -18,15 +18,17 @@
 body {
   background-color: var(--cta);
   font-family: var(--primaryfont);
+  font-size: 18px;
 }
 
 h1 {
   font-weight: var(--bold);
+  font-size: 32px;
   color: var(--whitespace);
 }
 h2 {
   font-weight: var(--bold);
-  font-size: 25;
+  font-size: 25px;
 }
 h4 {
   color: var(--whitespace);
@@ -58,5 +60,14 @@ h4 {
 }
 .checkboxes {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: center;
+}
+.sign-up {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.btn-sm {
+  border-radius: 20px;
 }
