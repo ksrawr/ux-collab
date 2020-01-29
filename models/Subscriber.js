@@ -1,11 +1,16 @@
 const mongoose = require("mongoose");
 
+const validateName = (name) => {
+  return /^[a-z]+$/i.test(name);
+};
+
 const subscriberSchema = new mongoose.Schema({
   firstName: {
     required: true,
     type: String,
     minlength: [2, "Your first name must be at least 2 characters."],
-    trim: true
+    trim: true,
+    match: [/^[a-z]+$/i, 'First name cannot contain numbers or special characters'],
   },
   lastName: {
     required: true,
