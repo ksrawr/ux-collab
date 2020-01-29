@@ -50,7 +50,9 @@
 
           <div class="row">*Google Link Placeholder*</div>
           <div class="row divider">
-            <p>———————————— Or ————————————</p>
+            <div class="spacer"></div>
+            <p id="or">Or</p>
+            <div class="spacer"></div>
           </div>
           <form class="needs-validation" id="subscriberForm">
             <div class="row">
@@ -109,46 +111,52 @@
             <div class="row checkboxes">
               <p>Select topics you'd like to know more about:</p>
               <div class="col-md-6">
-                <div class="custom-control custom-checkbox">
+                <div class="checkbox-body custom-control custom-checkbox">
                   <input
                     type="checkbox"
                     class="custom-control-input"
                     id="abductions"
+                    value="abductions"
                   />
-                  <label class="custom-control-label" for="abductions"
-                    >Abductions</label
+                  <label
+                    class="checkbox-body custom-control-label"
+                    for="abductions"
+                    ><img src="/images/ufo.svg" />Abductions</label
                   >
                 </div>
-                <div class="custom-control custom-checkbox">
+                <div class="checkbox-body custom-control custom-checkbox">
                   <input
                     type="checkbox"
                     class="custom-control-input"
                     id="alienNews"
+                    value="alienNews"
                   />
                   <label class="custom-control-label" for="alienNews"
-                    >Alien News</label
+                    ><img src="/images/spaceship.svg" />Alien News</label
                   >
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="custom-control custom-checkbox">
+                <div class="checkbox-body custom-control custom-checkbox">
                   <input
                     type="checkbox"
                     class="custom-control-input"
                     id="popCulture"
+                    value="popCulture"
                   />
                   <label class="custom-control-label" for="popCulture"
-                    >Pop Culture</label
+                    ><img src="/images/alien2.svg" />Pop Culture</label
                   >
                 </div>
-                <div class="custom-control custom-checkbox">
+                <div class="checkbox-body custom-control custom-checkbox">
                   <input
                     type="checkbox"
                     class="custom-control-input"
                     id="areaFiftyOne"
+                    value="areaFiftyOne"
                   />
                   <label class="custom-control-label" for="areaFiftyOne"
-                    >Area 51</label
+                    ><img src="/images/alien1.svg" />Area 51</label
                   >
                 </div>
               </div>
@@ -158,15 +166,23 @@
                 type="checkbox"
                 class="custom-control-input"
                 id="consent"
+                value="consent"
               />
               <label class="custom-control-label" for="consent"
-                >I agree to the terms and conditions and privacy policy.
+                >I agree to the terms and conditions and privacy policy
               </label>
               <button class="btn btn-secondary btn-sm" type="submit">
                 Sign Up
               </button>
             </div>
           </form>
+          <footer>
+            <p>
+              This site is protected by reCAPTCHA and the Google
+              <a href="#">Privacy Policy</a> and
+              <a href="#">Terms of Service</a> apply.
+            </p>
+          </footer>
         </div>
       </div>
     </div>
